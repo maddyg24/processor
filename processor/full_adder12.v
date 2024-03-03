@@ -1,0 +1,31 @@
+module full_adder12(A, B, out, cout);
+    input [11:0] A, B;
+    output [11:0] out;
+    output cout;
+    wire w0, w1, w2, w3, w4, w5, w6, w7, w8, w9, w10, w11, w12, w13, w14, w15, w16, w17, w18, w19, w20, w21, w22, w23, w24, w25, w26, w27, w28, w29, w30, w31;
+    full_adder ADD0(w0, cout0, A[0], B[0], 1'b0);
+    full_adder ADD1(w1, cout1, A[1], B[1], cout0);
+    full_adder ADD2(w2, cout2, A[2], B[2], cout1);
+    full_adder ADD3(w3, cout3, A[3], B[3], cout2);
+    full_adder ADD4(w4, cout4, A[4], B[4], cout3);
+    full_adder ADD5(w5, cout5, A[5], B[5], cout4);
+    full_adder ADD6(w6, cout6, A[6], B[6], cout5);
+    full_adder ADD7(w7, cout7, A[7], B[7], cout6);
+    full_adder ADD8(w8, cout8, A[8], B[8], cout7);
+    full_adder ADD9(w9, cout9, A[9], B[9], cout8);
+    full_adder ADD10(w10, cout10, A[10], B[10], cout9);
+    full_adder ADD11(w11, cout11, A[11], B[11], cout10);
+
+    assign out[0] = w0;
+    assign out[1] = w1;
+    assign out[2] = w2;
+    assign out[3] = w3;
+    assign out[4] = w4;
+    assign out[5] = w5;
+    assign out[6] = w6;
+    assign out[7] = w7;
+    assign out[8] = w8;
+    assign out[9] = w9;
+    assign out[10] = w10;
+    assign out[11] = w11;
+endmodule
